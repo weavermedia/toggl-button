@@ -23,10 +23,10 @@
       } else {
         msg = {
           type: 'timeEntry',
-          description: $('.content_for_perma', elem).textContent
+          description: $('head title').text + ' - ' + $('.content_for_perma', elem).textContent
         };
-        btnText = 'Started...';
-        color = '#1ab351';
+        btnText = 'Stop timer';
+        color = '#ff0000';
       }
 
       chrome.extension.sendMessage(msg);
